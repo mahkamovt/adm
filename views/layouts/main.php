@@ -429,8 +429,6 @@ JasnyBootstrapAsset::register($this);
 
     </section>
 
-
-
     <?php $this->endBody() ?>
 
     </body>
