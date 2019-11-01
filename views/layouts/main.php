@@ -30,7 +30,7 @@ JasnyBootstrapAsset::register($this);
         <meta name="apple-mobile-web-app-title" content="ADM" />
         <meta name="apple-mobile-web-app-capable" content="yes">
         <meta name="apple-mobile-web-app-status-bar-style" content="black">
-		        <link href="/images/ico/splash/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+		<link href="/images/ico/splash/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 		<link href="/images/ico/splash/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 		<link href="/images/ico/splash/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
 		<link href="/images/ico/splash/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
@@ -40,7 +40,6 @@ JasnyBootstrapAsset::register($this);
 		<link href="/images/ico/splash/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 		<link href="/images/ico/splash/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
 		<link href="/images/ico/splash/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
-
         <link rel="apple-touch-icon" sizes="57x57" href="/images/ico/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/images/ico/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/images/ico/apple-icon-72x72.png">
@@ -62,11 +61,8 @@ JasnyBootstrapAsset::register($this);
 
     </head>
     <!--/head-->
+
     <body>
-
-
-
-
     	<button type="button" class="ad2hs-prompt">Установить веб приложение</button>
     	<div class="ios-prompt">
 	      <span class="close-ios-prompt">&times;</span>
