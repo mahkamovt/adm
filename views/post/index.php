@@ -14,13 +14,12 @@ use yii\widgets\Breadcrumbs;
 		<div class="container">
 			<img src="/images/shop/adm-banner.jpg" alt="" />
 		</div>
-	</section>
+</section>
 
 <?php $this->endBlock();?>
+
 <?php
-
-$this->params['breadcrumbs'][] = ['label' => 'Новости'];
-
+ $this->params['breadcrumbs'][] = ['label' => 'Новости'];
 ?>
 
 <div class="container adm">
