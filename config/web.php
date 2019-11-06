@@ -20,6 +20,13 @@ $config = [
             'defaultRoute' => 'ordershop/index',
 
         ],
+
+            'debug' => [
+            'class' => 'yii\debug\Module',
+            'allowedIPs' => ['127.0.0.1', '::1']
+
+        ],
+
         'rbac' => [
             'class' => 'mdm\admin\Module',
             'controllerMap' => [
@@ -50,6 +57,9 @@ $config = [
         'authManager' => [
             'class' => 'yii\rbac\DbManager', // or use 'yii\rbac\DbManager'
         ],
+
+
+        'cache' => 'yii\caching\ApcCache',
 
         'devicedetect' => [
         'class' => 'alexandernst\devicedetect\DeviceDetect'

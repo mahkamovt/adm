@@ -39,7 +39,11 @@ use yii\bootstrap\Modal;
                                 <div class="single-products">
                                         <div class="productinfo text-center">
 
-                      <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>"> <?= Html::img($mainImg->getUrl('300x300'), ['alt' => $hit->name])?></a>
+                      <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>">
+
+                        <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('300x300')?>" alt="<?= $hit->name?>">
+
+                      </a>
                                             <?php if(!empty($hit->stock_price) ):?>
 <h2> <?= $hit->stock_price?> ₽ <strike><?= $hit->price?> ₽</strike></h2>
 

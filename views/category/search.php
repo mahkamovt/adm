@@ -46,7 +46,7 @@
                   <div class="product-image-wrapper">
                      <div class="single-products">
                         <div class="productinfo text-center">
-                           <?= Html::img($mainImg->getUrl('268x249'), ['alt' => $product->name])?>
+                           <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('268x249')?>" alt="<?= $product->name?>">
                          <?php if(!empty($product->stock_price) ):?>
 <h2> <?= $product->stock_price?> ₽ <strike><?= $product->price?> ₽</strike></h2>
 

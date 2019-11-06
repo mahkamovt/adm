@@ -83,7 +83,13 @@ $this->params['breadcrumbs'][] = ['label' => $category->name,];
 								<div class="single-products">
 									<div class="productinfo text-center">
 
-									<a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>">	<?= Html::img($mainImg->getUrl('250x250'), ['alt' => $product->name])?></a>
+									<a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>">
+
+
+
+
+										<img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('250x250')?>" alt="<?= $product->name?>">
+										</a>
 										<?php if(!empty($product->stock_price) ):?>
 <h2> <?= $product->stock_price?> ₽ <strike><?= $product->price?> ₽</strike></h2>
 

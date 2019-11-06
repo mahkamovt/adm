@@ -41,7 +41,9 @@
             <p class="category_hits_title">
                <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $categoryHit['id']])?>" target="_blank" aria-label="<?= $categoryHit->name?>"><?= $categoryHit->name?>
             </p>
-              <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $categoryHit['id']])?>" target="_blank" aria-label="<?= $categoryHit->name?>">  <?= Html::img($categoryImg->getUrl('250x250'), ['alt' => $categoryHit->name])?></a>
+              <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $categoryHit['id']])?>" target="_blank" aria-label="<?= $categoryHit->name?>">
+              	<img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $categoryImg->getUrl('250x250')?>" alt="<?= $categoryHit->name?>">
+              </a>
          </div>
     <?php endforeach;?>
 
@@ -70,7 +72,8 @@
                         <button type="button" class="btn btn-default get"><a href="<?= $slide->button ?>" class="carousel-link" aria-label="">Посмотреть</a></button>
                      </div>
                      <div class="col-sm-6">
-                        <?= Html::img($img, ['alt' => $slide->title, 'class'=>'girl img-responsive'])?>
+                     	<img class="girl img-responsive lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $img?>" alt="<?= $slide->title?>">
+
                      </div>
                   </div>
                   <?php endforeach;?>
@@ -125,7 +128,8 @@
                   <div class="product-image-wrapper">
                      <div class="single-products">
                         <div class="productinfo text-center">
-                           <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" aria-label=""> <?= Html::img($mainImg->getUrl('250x250'), ['alt' => $hit->name])?></a>
+                           <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" aria-label="">
+							<img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('250x250')?>" alt="<?= $hit->name?>">
                            <?php if(!empty($hit->stock_price) ):?>
                            <h2> <?= $hit->stock_price?> ₽ <strike><?= $hit->price?> ₽</strike></h2>
                            <?php else:?>

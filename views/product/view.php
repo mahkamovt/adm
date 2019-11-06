@@ -52,7 +52,9 @@
 
                   <div class="main-gallery-adm">
                      <div class="view-product zoom" id="adm-img">
-                        <?=Html::img($mainImg['url'], ['alt' => $product->name])?>
+
+
+                        <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg['url']?>" alt="<?= $product->name?>">
                      </div>
                      <div id="similar-product" class="carousel slide" data-ride="carousel">
                         <!-- Wrapper for slides -->
@@ -61,7 +63,12 @@
                            <?php if($i % 3 == 0):?>
                            <div class="mega-gallery item <?php if($i == 0) echo ' active'?>">
                               <?php endif;?>
-                              <a href=""><?= Html::img($img->getUrl('84x85'), ['alt' => ''])?></a>
+                              <a href="">
+
+
+                                    <img class="lazy" src="/images/home/Eclipse-0.7s-84px.svg" data-original="<?= $img->getUrl('84x85')?>" alt="">
+
+                                 </a>
                               <?php $i++; if($i % 3 == 0 || $i == $count):?>
                            </div>
                            <?php endif;?>
@@ -94,8 +101,7 @@
                              <?}?>
                            <?php foreach($gallery as $key => $img): ?>
                            <div class="item <?php if($key == 0) echo ' active'?>">
-
-                              <?= Html::img($img->getUrl(''), ['alt' => ''])?>
+                              <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $img->getUrl('')?>" alt="">
                            </div>
                            <?php endforeach;?>
                         </div>
