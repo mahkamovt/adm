@@ -114,7 +114,6 @@ $config = [
                '<id:\d+\/?>images/image-by-item-and-alias' => 'yii2images/images/image-by-item-and-alias',
                'category/<id:\d+\/?>' => 'category/view',
                'product/<id:\d+\/?>' => 'product/view',
-
                 'account/<id:\d+>/update/'=>'admin/user/update',
                 'search' => 'category/search',
                 'delivery' => 'delivery/index',
@@ -140,7 +139,7 @@ $config = [
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
             'category/*',
-           'product/*',
+            'product/*',
            'cart/*',
            'yii2images/*',
             'delivery/*',
@@ -155,7 +154,8 @@ $config = [
             'rbac/user/change-password',
             'site/error',
             'admin/user/update',
-            'gii/*'
+            'gii/*',
+            'rbac/user/reset-password?token=AMB2lTKCEzn4c-niQMCMlNWR8j2YwW1x_1573105405'
 
 
 
