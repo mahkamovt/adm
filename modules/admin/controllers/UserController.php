@@ -90,7 +90,9 @@ class UserController extends Controller
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionUpdate($id)
+
     {
+        $id = (int)$id;
         $model = $this->findModel($id);
         $UserInfo = User::find()->where(['id' => $id])->one();
        if($UserInfo->id != Yii::$app->user->identity->id) {
@@ -98,11 +100,11 @@ class UserController extends Controller
 
         }
 
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->password = \Yii::$app->security->generatePasswordHash($model->password);
             Yii::$app->getSession()->setFlash('success', 'Профиль успешно изменен');
             return $this->redirect(['../account']);
+
         }
 
         return $this->render('update', [

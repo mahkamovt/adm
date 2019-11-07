@@ -188,11 +188,13 @@ JasnyBootstrapAsset::register($this);
 
             <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
                 <!--Акционный баннер -->
-                <section id="advertisement" class="mob-nav-banner">
-                    <div class="container">
-                        <img src="/images/shop/adm-banner.jpg" alt="" />
-                    </div>
-                </section>
+
+
+                <section id="advertisement" class="mob-nav-banner video-adm">
+
+   <h3><a class="header-video-news"href="<?= \yii\helpers\Url::to(['category/stock']) ?>" aria-label="">-20 процентов на новую коллекцию</a></h3>
+
+</section>
                 <!--/Акционный баннер-->
                 <!--Мобильный поиск-->
                 <div class="search_box mob-search-adm">
@@ -205,7 +207,7 @@ JasnyBootstrapAsset::register($this);
                     <!-- Подключение виджета меню категорий для мобильных телефонов -->
                     <?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
                     <!-- /Подключение виджета меню категорий для мобильных телефонов -->
-                    <hr>
+
                     <li><a href="<?= \yii\helpers\Url::home()?>">Главная</a></li>
                     <li><a href="<?= \yii\helpers\Url::to(['post/index'])  ?>">Новости</a></li>
                     <li><a href="<?= \yii\helpers\Url::to(['delivery/index'])  ?>">Условия доставки</a></li>
@@ -213,7 +215,7 @@ JasnyBootstrapAsset::register($this);
                     <?php if(!Yii::$app->user->isGuest): ?>
                         <li><a href="<?= \yii\helpers\Url::to(['/site/logout'])?>">Выйти</a></li>
                     <?php endif;?>
-                    <hr>
+
                     <li><a href="#"><i class="fa fa-phone"></i>+7 (920) 753 87 05</a></li>
                     <li><a href="#"><i class="fa fa-envelope"></i> adm@icloud.com</a></li>
                 </ul>
@@ -234,7 +236,7 @@ JasnyBootstrapAsset::register($this);
                 </button>
                 <div class="logo pull-adm">
                     <a href="<?= \yii\helpers\Url::home()?>">
-                        <?=Html::img("@web/images/home/logo.png", ['alt' => 'ADM', 'style' => 'height: 39px;', 'class' => 'adm-logo-mob'] )?>
+                        <?=Html::img("@web/images/home/adm-logo-svg-mob.svg", ['alt' => 'ADM', 'style' => 'height: 39px;', 'class' => 'adm-logo-mob'] )?>
                     </a>
                 </div>
                 <div class="cart-nav-mob">
@@ -246,7 +248,7 @@ JasnyBootstrapAsset::register($this);
                 <div class="cart-nav-mob">
                     <?php if(!Yii::$app->user->isGuest): ?>
                         <a href="/account">
-                            <img class="adm-cart-product" src="/images/home/icons8-checked-user-male-50.png" alt=""></a>
+                            <img class="adm-cart-product" src="/images/home/user-svg.svg" alt=""></a>
                     <?php else:?>
                         <a href="/account">
                             <img class="adm-cart-product" src="/images/home/icons8-account-filled-50.png" alt=""></a>
@@ -256,7 +258,7 @@ JasnyBootstrapAsset::register($this);
                 <div class="cart-nav-mob">
 
                         <a href="<?= \yii\helpers\Url::to(['/rbac/user/signup'])?>">
-                            <img class="adm-cart-product" src="/images/home/icons8-registration-50.png" alt=""></a>
+                            <img class="adm-cart-product" src="/images/home/adm-registration-svg.svg" alt=""></a>
 
                 </div>
 <?php else:?>
@@ -276,7 +278,7 @@ JasnyBootstrapAsset::register($this);
                         <div class="col-sm-4">
                             <div class="logo pull-left">
                                 <a href="<?= \yii\helpers\Url::home()?>">
-                                    <?=Html::img("@web/images/home/logo.png", ['alt' => 'ADM', 'style' => 'height: 39px;', 'class' => 'adm-logo'] )?>
+                                    <?=Html::img("@web/images/home/adm-logo-svg.svg", ['alt' => 'ADM', 'style' => 'height: 39px;', 'class' => 'adm-logo'] )?>
                                 </a>
                             </div>
                         </div>

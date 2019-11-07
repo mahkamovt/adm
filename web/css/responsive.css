@@ -372,8 +372,11 @@
   .category-products {
     margin-bottom: 0px;
     padding-bottom: 0px;
+    border: none;
   }
-
+	.category-products li a	{
+		color: #fff!important;
+	}
   .cart-nav-mob span {
     margin-left: 5px;
     color: #333;
@@ -533,13 +536,13 @@
   }
 
   img.adm-logo-mob {
-    height: 25px!important;
+    height: 20px!important;
   }
 
   .logo.pull-adm {
     float: left;
     width: 20%;
-    margin-top: 10px;
+    margin-top: 13.4px;
   }
 
   .mainmenu ul li:last-child {

@@ -40,7 +40,7 @@ class ChangePassword extends Model
         /* @var $user User */
         $user = Yii::$app->user->identity;
         if (!$user || !$user->validatePassword($this->oldPassword)) {
-            $this->addError('oldPassword', 'Incorrect old password.');
+            $this->addError('oldPassword', 'Некорректный старый пароль');
         }
     }
 
@@ -67,7 +67,7 @@ class ChangePassword extends Model
 
      public function attributeLabels() {
         return [
-			'oldPassword' => 'Новый пароль',
+			'oldPassword' => 'Старый пароль',
             'newPassword' => 'Новый пароль',
             'retypePassword' => 'Повторите пароль'
 

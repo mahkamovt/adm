@@ -172,11 +172,11 @@ class UserController extends Controller
         $model = new PasswordResetRequest();
         if ($model->load(Yii::$app->getRequest()->post()) && $model->validate()) {
             if ($model->sendEmail()) {
-                Yii::$app->getSession()->setFlash('success', 'Check your email for further instructions.');
+                Yii::$app->getSession()->setFlash('success', 'Проверьте свою почту и следуйте инструкциям');
 
                 return $this->goHome();
             } else {
-                Yii::$app->getSession()->setFlash('error', 'Sorry, we are unable to reset password for email provided.');
+                Yii::$app->getSession()->setFlash('error', 'Извените, нет такой почты.');
             }
         }
 

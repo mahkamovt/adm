@@ -81,7 +81,7 @@ public function actionView() {
 	  	$this->saveOrderItems($session['cart'], $order->id);
 		Yii::$app->session->setFlash('success', 'Спасибо за заказ! Наш Менеджер скоро свяжется с вами!');
 		Yii::$app->mailer->compose('order', ['session' => $session])
-			->setFrom(['mahkamovt@icloud.com' => 'ADM'])
+			->setFrom(['admshop@gmail.com' => 'ADM'])
 			->setTo($order->email)
 			->setSubject('Заказ')
 			->send();

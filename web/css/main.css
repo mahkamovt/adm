@@ -128,7 +128,7 @@ button.navbar-toggle.adm-toggle {
 }
 
 span.adm-bar {
-  background-color: #000!important;
+    background-color: #fff!important;
 }
 
 .hello-user {
@@ -2029,10 +2029,18 @@ ul.sub-category-top-menu {
       }
 
       span.close-ios-prompt{
-        color: rgb(187, 187, 187);
+      color: rgb(187, 187, 187);
       float: right;
       margin-top: -55px;
       margin-right: -5px;
       font-size: 29px;
       color: #000;
+      }
+      nav#myNavmenu {
+          background-color: #000;
+      }
+      .navbar.navbar-default.navbar-fixed-top {
+      background-color: #000;
+      border-color: 1px solid #363738!important;
+      border-bottom: none;
       }
