@@ -121,7 +121,7 @@ $config = [
                 'login' => 'rbac/user/login',
                 'signup' => 'rbac/user/signup',
                 'admin/users' => 'rbac/user',
-                'reset-password' => 'rbac/user/request-password-reset',
+                'request-password-reset' => 'rbac/user/request-password-reset',
                 'change-password' => 'rbac/user/change-password',
                 'account' => 'admin/ordersuser',
                 'articles' => 'post/index',
@@ -154,9 +154,7 @@ $config = [
             'rbac/user/change-password',
             'site/error',
             'admin/user/update',
-            'gii/*',
-            'rbac/user/reset-password?token=AMB2lTKCEzn4c-niQMCMlNWR8j2YwW1x_1573105405'
-
+            'gii/*'
 
 
         ]
