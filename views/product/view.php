@@ -51,21 +51,18 @@
                            <div class="mega-gallery item <?php if($i == 0) echo ' active'?>">
                               <?php endif;?>
                               <a href="">
-
-
                                     <img class="lazy" src="/images/home/Eclipse-0.7s-84px.svg" data-original="<?= $img->getUrl('84x85')?>" alt="">
-
                                  </a>
                               <?php $i++; if($i % 3 == 0 || $i == $count):?>
                            </div>
                            <?php endif;?>
                            <?php endforeach;?>
-                            <a class="left item-control" href="#similar-product" data-slide="prev">
+                            <!--<a class="left item-control" href="#similar-product" data-slide="prev">
                      <i class="fa fa-angle-left"></i>
                      </a>
                      <a class="right item-control" href="#similar-product" data-slide="next">
                      <i class="fa fa-angle-right"></i>
-                     </a>
+                     </a>-->
                         </div>
                      </div>
 
