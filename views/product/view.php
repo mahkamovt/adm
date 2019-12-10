@@ -18,20 +18,7 @@
 <section>
    <div class="container adm">
       <div class="row">
-         <div class="col-sm-3 adm-category">
-            <div class="left-sidebar">
-               <h2>Категории</h2>
-               <ul class="catalog category-products">
-                  <?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
-               </ul>
-               <!--/category-products-->
-               <div class="shipping text-center">
-                  <!--shipping-->
-                  <img src="/images/home/shipping.jpg" alt="" />
-               </div>
-               <!--/shipping-->
-            </div>
-         </div>
+
 <!-- Изображение товара декстоп-->
          <?php
 
@@ -39,10 +26,10 @@
             $gallery = $product->getImages();
 
             ?>
-         <div class="col-sm-9 mob-padding">
+         <div class="col-sm-12 mob-padding">
             <div class="product-details">
                <!--product-details-->
-               <div class="col-sm-5 mob-slider-product">
+               <div class="col-sm-7 mob-slider-product">
                   <?php if($product->new):?>
                   <?=Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'newarrival'])?>
                   <?php endif?>
@@ -109,13 +96,23 @@
                   </div>
 <!-- /Изображение товара мобилка-->
                </div>
-               <div class="col-sm-7">
+               <div class="col-sm-5">
                   <div class="product-information">
                      <!--/product-information-->
                      <h1 class="adm-h1"><?= $product->name?></h1>
                      <span class="adm-product-info">
                         <span class="price price-adm-mob"><?= $product->price ?>  руб.</span>
                         <!-- Колличество <input type="text" value="1" id="qty" />-->
+                         <?php
+                        if($product_property['is_action']){
+                            echo '<p><b>Статус: </b>';
+                            foreach ($product_property['action'] as $key => $value) {
+                                echo $value;
+                            }
+                        }
+                        ?>
+                     </p>
+                     <p><b>Категория:</b> <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $product->category->id])?>" class="adm-category"><?= $product->category->name?></a></p>
                         <span class="size-lable">Размер:</span><?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data', 'id' => 'admform', 'class' => 'adm-form-product']]); ?>
                         <?php $items = [
                            'S' => 'S',
@@ -134,24 +131,11 @@
 
                            ?>
                         <?php ActiveForm::end(); ?>
-
-                        <a href="#" data-id="<?= $product->id ?>" class="btn btn-fefault add-to-cart cart view_product">
-                        <img class="adm-cart-product" src="/images/home/icons8-shopping-bag-filled-50.png">
-                        </a>
                         <a href="#" data-id="<?= $product->id ?>" class="btn btn-success add-to-cart cart cart-mob-btn">
                         Добавить в корзину
                         </a>
                      </span>
-                     <?php
-                        if($product_property['is_action']){
-                            echo '<p><b>Статус: </b>';
-                            foreach ($product_property['action'] as $key => $value) {
-                                echo $value;
-                            }
-                        }
-                        ?>
-                     </p>
-                     <p><b>Категория:</b> <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $product->category->id])?>" class="adm-category"><?= $product->category->name?></a></p>
+
                   </div>
                   <!--/product-information-->
                </div>

@@ -195,19 +195,19 @@ JasnyBootstrapAsset::register($this);
    <h3><a class="header-video-news"href="<?= \yii\helpers\Url::to(['category/stock']) ?>" aria-label="">-20 процентов на новую коллекцию</a></h3>
 
 </section>
-                <!--/Акционный баннер-->
-                <!--Мобильный поиск-->
+<!--/Акционный баннер-->
+
+<!--Мобильный поиск-->
                 <div class="search_box mob-search-adm">
                     <form method="get" action="<?= \yii\helpers\Url::to(['category/search'])  ?>" >
                         <input type="text" placeholder="Поиск" name="q"/>
                     </form>
                 </div>
-                <!--/Мобильный поиск-->
+<!--/Мобильный поиск-->
                 <ul class="catalog category-products">
-                    <!-- Подключение виджета меню категорий для мобильных телефонов -->
+<!-- Подключение виджета меню категорий для мобильных телефонов -->
                     <?= \app\components\MenuWidget::widget(['tpl' => 'menu']) ?>
-                    <!-- /Подключение виджета меню категорий для мобильных телефонов -->
-
+<!-- /Подключение виджета меню категорий для мобильных телефонов -->
                     <li><a href="<?= \yii\helpers\Url::home()?>">Главная</a></li>
                     <li><a href="<?= \yii\helpers\Url::to(['post/index'])  ?>">Новости</a></li>
                     <li><a href="<?= \yii\helpers\Url::to(['delivery/index'])  ?>">Условия доставки</a></li>
@@ -241,7 +241,7 @@ JasnyBootstrapAsset::register($this);
                 </div>
                 <div class="cart-nav-mob">
                     <a href="#" onclick="return getCart()">
-                        <img class="adm-cart-product" src="/images/home/icons8-shopping-bag-filled-50.png" alt=""><span><?php echo $cartcount = $this->params['cartcount'];?></span></a>
+                        <img class="adm-cart-product" src="/images/home/bag-svg.svg" alt=""><span><?php echo $cartcount = $this->params['cartcount'];?></span></a>
                 </div>
 
 
@@ -251,7 +251,7 @@ JasnyBootstrapAsset::register($this);
                             <img class="adm-cart-product" src="/images/home/user-svg.svg" alt=""></a>
                     <?php else:?>
                         <a href="/account">
-                            <img class="adm-cart-product" src="/images/home/icons8-account-filled-50.png" alt=""></a>
+                            <img class="adm-cart-product" src="/images/home/lk-svg.svg" alt=""></a>
                     <?php endif;?>
                 </div>
    <?php if(Yii::$app->user->isGuest): ?>
@@ -265,7 +265,7 @@ JasnyBootstrapAsset::register($this);
             <div class="cart-nav-mob">
 
                         <a href="<?= \yii\helpers\Url::to(['/site/logout'])?>">
-                        <img class="adm-cart-product" src="/images/home/icons8-exit-50.png" alt=""></a>
+                        <img class="adm-cart-product" src="/images/home/lk-exit.svg" alt=""></a>
 
                 </div>
  <?php endif;?>

@@ -14,7 +14,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'mainimage')->fileInput(['maxlength' => true])->label('Изображение') ?>
+    <?= $form->field($model, 'mainimage')->fileInput(['maxlength' => true])->label('Изображение на главной') ?>
 
 
 

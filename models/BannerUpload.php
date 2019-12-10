@@ -33,12 +33,12 @@ class BannerUpload extends Model
     public function uploadFile(UploadedFile $file, $currentBanner)
     {
         $this->banner = $file;
-        if ($this->validate()) {
+
 
             $this->deleteCurrentBanner($currentBanner);
             return $this->saveBanner();
 
-        }
+
 
     }
 

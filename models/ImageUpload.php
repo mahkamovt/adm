@@ -17,7 +17,7 @@ class ImageUpload extends Model
 
         return [
             [['image'], 'required'],
-            [['image'], 'file', 'extensions' => 'jpg,png']
+            [['image'], 'file', 'extensions' => 'jpg,png,svg']
         ];
 
     }
@@ -27,16 +27,15 @@ class ImageUpload extends Model
 
         $this->image = $file;
 
-
-        if ($this->validate()) {
-
-            $this->deleteCurrentImage($currentImage);
-            return $this->saveImage();
-
-        }
+        $this->deleteCurrentImage($currentImage);
+         return $this->saveImage();
 
 
-    }
+
+}
+
+
+
 
     public function deleteCurrentImage($currentImage)
     {
@@ -54,7 +53,7 @@ class ImageUpload extends Model
 
     }
 
-    private function getFolder()
+    public function getFolder()
     {
 
         return Yii::getAlias('@web') . 'uploads/';

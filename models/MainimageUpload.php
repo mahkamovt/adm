@@ -7,7 +7,11 @@ use Yii;
 use yii\base\Model;
 use yii\web\UploadedFile;
 
-class mainimageUpload extends Model
+/**
+ *
+ * @property string $folder
+ */
+class MainimageUpload extends Model
 {
 
     public $mainimage;
@@ -21,30 +25,37 @@ class mainimageUpload extends Model
         ];
 
     }
-
+    /**
+     * @param UploadedFile $file
+     * @param $currentMainimage
+     * @return string
+     */
     public function uploadFile(UploadedFile $file, $currentMainimage)
     {
-
         $this->mainimage = $file;
 
 
-        if ($this->validate()) {
+        $this->deleteCurrentMainimage($currentMainimage);
+        return $this->saveMainimage();
 
-            $this->deletecurrenMainimage($currentMainimage);
-            return $this->saveMainimage();
-
-        }
 
 
     }
 
-    public function deletecurrenMainimage($currentMainimage)
+    /**
+     * @param $currentMainimage
+     */
+    public function deleteCurrentMainimage($currentMainimage)
     {
         if ($this->fileExists($currentMainimage)) {
             unlink($this->getFolder() . $currentMainimage);
         }
     }
 
+    /**
+     * @param $currentMainimage
+     * @return bool
+     */
     public function fileExists($currentMainimage)
     {
 
@@ -54,7 +65,7 @@ class mainimageUpload extends Model
 
     }
 
-    private function getFolder()
+    public function getFolder()
     {
 
         return Yii::getAlias('@web') . 'uploads/';

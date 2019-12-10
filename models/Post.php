@@ -114,7 +114,7 @@ class Post extends ActiveRecord
         return ($this->mainimage) ? '/uploads/' . $this->mainimage : '/no=-image.png';
     }
 
-    public function beforeDeletemainimage()
+    public function beforeDeleteMainimage()
     {
         $this->deleteMainimage();
         return parent::beforeDelete();
@@ -123,7 +123,7 @@ class Post extends ActiveRecord
     public function deleteMainimage()
     {
         $imageUploadModel = new MainimageUpload();
-        $imageUploadModel->deleteCurrentmainimage($this->mainimage);
+        $imageUploadModel->deleteCurrentMainimage($this->mainimage);
     }
 }
 

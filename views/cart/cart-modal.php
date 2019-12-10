@@ -7,8 +7,8 @@
 			<th class="cart-th">Наименование</th>
 			<th class="cart-th">Кол-во</th>
 			<th class="cart-th">Размер</th>
-			<th class="cart-th">Цена</th>
-			<th class="cart-th"><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></th>
+			<th colspan="2" class="cart-th">Цена</th>
+
   		</tr>
   	</thead>
   	<tboby>
@@ -19,16 +19,16 @@
 		<td><?= $item['name']?></td>
 		<td><?= $item['qty']?></td>
 		<td><?= $item['size']?></td>
-		<td><?= $item['price']?></td>
+		<td><?= $item['price']?> руб.</td>
 		<td><span data-id="<?= $id ?>" class="glyphicon glyphicon-remove text-danger delete-item" aria-hidden="true"></span></td>
 	</tr>
 	<?php endforeach;?>
 	<tr>
 		<td colspan="6">Итого</td>
-		<td><?= $session['cart.qty']?></td>
+		<td><?= $session['cart.qty']?> шт.</td>
 	<tr>
 		<td colspan="6">Cумма</td>
-		<td><?= $session['cart.sum']?></td>
+		<td><?= $session['cart.sum']?> руб.</td>
 	</tr>
 	</tr>
   	</tboby>

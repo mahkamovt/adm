@@ -34,15 +34,15 @@
 
     <div class="container">
       <div class="row">
-      <div class="col-sm-12">
+      <div class="col-12">
       <?php foreach ($categoryHits as $categoryHit) :?>
       <?php $categoryImg = $categoryHit->getImage();?>
-         <div class="col-sm-4 category_hits">
+         <div class="col-sm-4 col-xs-12 category_hits">
             <p class="category_hits_title">
                <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $categoryHit['id']])?>" target="_blank" aria-label="<?= $categoryHit->name?>"><?= $categoryHit->name?>
             </p>
               <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $categoryHit['id']])?>" target="_blank" aria-label="<?= $categoryHit->name?>">
-              	<img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $categoryImg->getUrl('250x250')?>" alt="<?= $categoryHit->name?>">
+              	<img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $categoryImg->getUrl('500x500')?>" alt="<?= $categoryHit->name?>">
               </a>
          </div>
     <?php endforeach;?>
@@ -107,8 +107,9 @@
                   <?php if(count($model)): ?>
                   <?php foreach ($model as $item): ?>
                   <?php $img = $item->getMainimage();?>
+                  <?// debug($item->getMainimage()) ?>
                   <div class="well col-sm-12 on-main-news">
-                     <a href="<?= \yii\helpers\Url::to(['post/show', 'id' => $item->id]) ?>" aria-label=""><?= HtmlExtend::img($img, ['alt' => $item->title, 'width'=>'100%', 'class' => 'lazy'])?></a>
+                     <a href="<?= \yii\helpers\Url::to(['post/show', 'id' => $item->id]) ?>" aria-label=""><?= Html::img($img, ['alt' => $item->title, 'width'=>'100%'])?></a>
                      <h3><?=$item->title?></h3>
                   </div>
                   <?php endforeach ?>
@@ -154,7 +155,7 @@
                                                   ]);
                               ?>
                            <section>
-                              <div class="container adm-modal">
+
                                  <?php
                                     $mainImg = $hit->getImage();
                                     $gallery = $hit->getImages();
@@ -182,7 +183,7 @@
                                        </div>
                                     </div>
                                  </div>
-                              </div>
+
                            </section>
                            <?php Modal::end();?>
                         </div>

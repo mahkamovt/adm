@@ -140,11 +140,10 @@ class PostController extends Controller
        if (Yii::$app->request->isPost)
        {
 
-          $post = $this->findModel($id);
-          $file = UploadedFile::getInstance($model, 'image');
+         $post = $this->findModel($id);
+         $file = UploadedFile::getInstance($model, 'image');
 
-
-          if($post->saveImage($model->uploadFile($file, $post->image)))
+         if($post->saveImage($model->uploadFile($file, $post->image)))
           {
             return $this->redirect(['view', 'id'=>$post->id]);
           }
@@ -205,6 +204,7 @@ public function actionSetMainimage($id)
        }
        return $this->render('mainimage', ['model'=>$model]);
     }
+
 }
 
 
