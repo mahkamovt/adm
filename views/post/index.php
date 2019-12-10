@@ -7,16 +7,6 @@ use yii\widgets\DetailView;
 use yii\widgets\LinkPager;
 use yii\widgets\Breadcrumbs;
 ?>
- <?php $this->beginBlock('block2');?>
-
-
-<section id="advertisement">
-		<div class="container">
-			<img src="/images/shop/adm-banner.jpg" alt="" />
-		</div>
-</section>
-
-<?php $this->endBlock();?>
 
 <?php
  $this->params['breadcrumbs'][] = ['label' => 'Новости'];

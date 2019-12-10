@@ -2078,3 +2078,7 @@ a.btn.btn-success.add-to-cart.cart.cart-mob-btn:hover{
 .modal-footer{
 	border-top: none!important;
 }
+
+.carousel-indicators .active{
+  height: 13px!important;
+}
