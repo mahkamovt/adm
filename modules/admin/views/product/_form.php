@@ -14,11 +14,11 @@ mihaildev\elfinder\Assets::noConflict($this);
 <div class="product-form">
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
+ <div class="upload-image-product">
 
-    <?= $form->field($model, 'image')->fileInput() ?>
-
-    <?= $form->field($model, 'gallery[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
-
+    <?= $form->field($model, 'image')->fileInput(['class' => 'upload-image']) ?>
+    <?= $form->field($model, 'gallery[]')->fileInput(['multiple' => true, 'accept' => 'image/*', 'class' => 'upload-image']) ?>
+</div>
 <div class="form-group field-product-category_id required has-success">
     <label class="control-label" for="product-category_id">Родительская категория</label>
         <select id="category-parent_id" class="form-control" name="Product[category_id]" aria-required="true" aria-invalid="false">
@@ -36,13 +36,6 @@ mihaildev\elfinder\Assets::noConflict($this);
         ]);
 
     ?>
-
-
-     <?php echo $form->field($model, 'lkimg')->widget(CKEditor::className(), [
-          'editorOptions' => ElFinder::ckeditorOptions('elfinder',[/* Some CKEditor Options */]),
-           ]);
-     ?>
-
     <?= $form->field($model, 'price')->textInput() ?>
     <?= $form->field($model, 'stock_price')->textInput() ?>
 

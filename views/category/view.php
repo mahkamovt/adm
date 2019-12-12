@@ -117,7 +117,7 @@ $this->params['breadcrumbs'][] = ['label' => $category->name,];
 ?>
 
 <section>
-		<div class="container adm-modal">
+
 		<?php
 			$mainImg = $product->getImage();
 			$gallery = $product->getImages();
@@ -153,7 +153,7 @@ $this->params['breadcrumbs'][] = ['label' => $category->name,];
 			</div>
 		</div>
 	</div>
-</div>
+
 				</section>
 
 

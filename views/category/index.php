@@ -25,7 +25,7 @@
 <section id="advertisement" class="video-adm">
    <?php if(count($model)): ?>
    <?php foreach ($model as $item): ?>
-   <h3><a class="header-video-news"href="<?= \yii\helpers\Url::to(['category/stock']) ?>" aria-label="">-20 процентов на новую коллекцию</a></h3>
+   <h3><a class="header-video-news"href="<?= \yii\helpers\Url::to(['category/stock']) ?>" aria-label="">Скидка на новую коллекцию</a></h3>
    <?php endforeach ?>
    <?php endif?>
 </section>
@@ -42,7 +42,7 @@
                <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $categoryHit['id']])?>" target="_blank" aria-label="<?= $categoryHit->name?>"><?= $categoryHit->name?>
             </p>
               <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $categoryHit['id']])?>" target="_blank" aria-label="<?= $categoryHit->name?>">
-              	<img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $categoryImg->getUrl('500x500')?>" alt="<?= $categoryHit->name?>">
+               <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $categoryImg->getUrl('500x500')?>" alt="<?= $categoryHit->name?>">
               </a>
          </div>
     <?php endforeach;?>
@@ -72,7 +72,7 @@
                         <button type="button" class="btn btn-default get"><a href="<?= $slide->button ?>" class="carousel-link" aria-label="">Посмотреть</a></button>
                      </div>
                      <div class="col-sm-6">
-                     	<img class="girl img-responsive lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $img?>" alt="<?= $slide->title?>">
+                        <img class="girl img-responsive lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $img?>" alt="<?= $slide->title?>">
 
                      </div>
                   </div>
@@ -130,7 +130,7 @@
                      <div class="single-products">
                         <div class="productinfo text-center">
                            <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" aria-label="">
-							<img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('250x250')?>" alt="<?= $hit->name?>">
+                     <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('250x250')?>" alt="<?= $hit->name?>">
                            <?php if(!empty($hit->stock_price) ):?>
                            <h2> <?= $hit->stock_price?> ₽ <strike><?= $hit->price?> ₽</strike></h2>
                            <?php else:?>
@@ -187,13 +187,6 @@
                            </section>
                            <?php Modal::end();?>
                         </div>
-                        <!--   <div class="product-overlay">
-                           <div class="overlay-content">
-                               <h2>$<?= $hit->price?></h2>
-                               <p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" ><?= $hit->name?></a></p>
-                               <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                           </div>
-                           </div> -->
                         <?php if($hit->new):?>
                         <?=Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'new'])?>
                         <?php endif?>
