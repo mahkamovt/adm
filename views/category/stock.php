@@ -31,7 +31,7 @@ use yii\bootstrap\Modal;
                 <div class="col-sm-12 padding-right">
                     <?php if( !empty($hits) ):?>
                     <div class="features_items"><!--features_items-->
-                        <h2 class="title text-center">-20% на новую коллекцию</h2>
+                        <h2 class="title text-center">Скидки на новую коллекцию</h2>
                         <?php foreach ($hits as $hit): ?>
                         <?php $mainImg = $hit->getImage();?>
                         <div class="col-sm-4 col-xs-6 ">

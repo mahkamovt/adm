@@ -59,7 +59,7 @@ $config = [
         ],
 
 
-        'cache' => 'yii\caching\ApcCache',
+      //  'cache' => 'yii\caching\ApcCache',
 
         'devicedetect' => [
         'class' => 'alexandernst\devicedetect\DeviceDetect'

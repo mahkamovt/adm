@@ -5,6 +5,7 @@
 
 @import url(https://fonts.googleapis.com/css?family=Abel);
 
+/*Основной сайт*/
 body {
   font-family: 'Roboto', sans-serif;
   position: relative;
@@ -1430,7 +1431,8 @@ ul.sub-category-top-menu {
      font-size: 14px;
      font-weight: 400;
      color: #696763;
-     margin-bottom: 2px;
+     margin-bottom: 25px;
+     max-height: 20px;
 }
  .productinfo img{
      width: 100%;
@@ -2081,4 +2083,34 @@ a.btn.btn-success.add-to-cart.cart.cart-mob-btn:hover{
 
 .carousel-indicators .active{
   height: 13px!important;
+}
+
+
+/*Админ-панель*/
+
+input#product-image, input#product-gallery {
+    display: none;
+}
+
+.field-product-gallery label.control-label, .field-product-image label.control-label {
+   width: 100%;
+    padding: 10px 9px 9px 8px;
+    color: #333;
+    border: 2px solid #000;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.field-product-gallery label.control-label, .field-product-image label.control-label {
+  cursor: pointer;
+}
+
+.upload-image-product {
+    width: 64%;
+}
+
+.form-group.field-product-image, .form-group.field-product-gallery{
+    width: 39%;
+    display: inline-block;
+    padding: 0px 24px 0px 0px;
 }

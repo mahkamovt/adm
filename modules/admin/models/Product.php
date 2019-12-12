@@ -61,7 +61,7 @@ class Product extends \yii\db\ActiveRecord
         return [
             [['category_id', 'name', 'price'], 'required'],
             [['category_id'], 'integer'],
-            [['content', 'hit', 'new', 'sale', 'lkimg'], 'string'],
+            [['content', 'hit', 'new', 'sale'], 'string'],
             [['price'], 'number'],
             [['stock_price'], 'number'],
             [['size'], 'required'],
@@ -77,9 +77,8 @@ class Product extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'image' => 'Фото (заполнять после того, как залил изображения в галерею)',
+            'image' => 'Главное изображение',
             'gallery' => 'Дополнительные изображения',
-            'lkimg' => 'Изображение для личного кабинета',
             'id' => 'ID товара',
             'category_id' => 'Категория',
             'name' => 'Название',

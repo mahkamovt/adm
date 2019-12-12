@@ -40,7 +40,7 @@ class CategoryController extends AppController {
         $this->view->params['cartcount'] = $session['cart.qty'];
         /*Вывод метатегов на главной*/
         $this->setMeta('ADM - акционные товары');
-        $hits = Product::find()->where(['hit' => '1'])->limit(9)->all();
+        $hits = Product::find()->where(['sale' => '1'])->limit(9)->all();
         // debug($hits);
 
         /*Пагинация*/
