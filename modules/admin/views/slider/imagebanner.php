@@ -6,16 +6,18 @@ use yii\widgets\ActiveForm;
 use app\models\Slider;
 use app\models\SliderImageUpload;
 
-
+$this->title = 'Изображение';
+$this->params['breadcrumbs'][] = ['label' => 'Слайды', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
-<div class="col-sm-5 post-form">
+<div class="col-sm-12 post-form">
 
     <?php $form = ActiveForm::begin(); ?>
-
+<div class="upload-image">
     <?= $form->field($model, 'image')->fileInput(['maxlength' => true])->label('Изображение') ?>
 
-
+</div>
 
     <div class="form-group">
         <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
@@ -23,10 +25,5 @@ use app\models\SliderImageUpload;
 
     <?php ActiveForm::end(); ?>
 
-</div>
-<div class="col-sm-7">
-    <div class="img-adm-login">
-        <img src="/images/user/adm-gif-1.gif" alt="">
-    </div>
 </div>
 </div>

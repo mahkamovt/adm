@@ -20,7 +20,7 @@ class CategoryController extends AppController {
         /*Вывод метатегов на главной*/
         $this->setMeta('ADM — Streetwear', '2', '3');
 
-        $hits = Product::find()->where(['hit' => '1'])->orderBy('id DESC')->limit(6)->all();
+        $hits = Product::find()->where(['hit' => '1'])->orderBy('id DESC')->all();
         $categoryHits = Category::find()->orderBy('id DESC')->limit(3)->all();
         $slides = Slider::find()->orderBy('id DESC')->limit(5)->all();
         //debug($slides);

@@ -188,13 +188,13 @@ JasnyBootstrapAsset::register($this);
 
             <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
                 <!--Акционный баннер -->
-
-
-                <section id="advertisement" class="mob-nav-banner video-adm">
-
-   <h3><a class="header-video-news"href="<?= \yii\helpers\Url::to(['category/stock']) ?>" aria-label="">-20 процентов на новую коллекцию</a></h3>
-
-</section>
+<?php if(!Yii::$app->user->isGuest): ?>
+                                        
+                                         <div class="username_mobile_nav"><a href="<?= \yii\helpers\Url::to(['/admin/ordersuser'])?>"><?=Yii::$app->user->identity['name']?> <?=Yii::$app->user->identity['lastname']?></a></div>
+                                    <?php else:?>
+                                       <div class="username_mobile_nav"><a href="<?= \yii\helpers\Url::to(['/admin/ordersuser'])?>">Войти</a></div>
+                                    <?php endif;?>
+            
 <!--/Акционный баннер-->
 
 <!--Мобильный поиск-->

@@ -14,7 +14,7 @@ mihaildev\elfinder\Assets::noConflict($this);
 <div class="product-form">
 
     <?php $form = ActiveForm::begin(['options' => ['enctype' => 'multipart/form-data']]); ?>
- <div class="upload-image-product">
+ <div class="upload-image">
 
     <?= $form->field($model, 'image')->fileInput(['class' => 'upload-image']) ?>
     <?= $form->field($model, 'gallery[]')->fileInput(['multiple' => true, 'accept' => 'image/*', 'class' => 'upload-image']) ?>

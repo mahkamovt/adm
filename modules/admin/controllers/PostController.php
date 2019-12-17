@@ -136,7 +136,7 @@ class PostController extends Controller
 
     {
        $model = new ImageUpload;
-
+       $post = $this->findModel($id);
        if (Yii::$app->request->isPost)
        {
 
@@ -150,7 +150,7 @@ class PostController extends Controller
 
 
        }
-       return $this->render('image', ['model'=>$model]);
+       return $this->render('image', compact('model','post'));
     }
 
 /*/Главное изображение новости*/
@@ -161,7 +161,7 @@ public function actionSetBanner($id)
 
     {
        $model = new BannerUpload;
-
+        $post = $this->findModel($id);
        if (Yii::$app->request->isPost)
        {
 
@@ -176,7 +176,7 @@ public function actionSetBanner($id)
 
 
        }
-       return $this->render('banner', ['model'=>$model]);
+       return $this->render('banner', compact('model','post'));
     }
 
 /*/Баннер новости*/
@@ -187,6 +187,7 @@ public function actionSetMainimage($id)
 
     {
        $model = new MainimageUpload;
+       $post = $this->findModel($id);
 
        if (Yii::$app->request->isPost)
        {
@@ -202,7 +203,7 @@ public function actionSetMainimage($id)
 
 
        }
-       return $this->render('mainimage', ['model'=>$model]);
+       return $this->render('mainimage', compact('model','post'));
     }
 
 }

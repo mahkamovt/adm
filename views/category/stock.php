@@ -34,7 +34,7 @@ use yii\bootstrap\Modal;
                         <h2 class="title text-center">Скидки на новую коллекцию</h2>
                         <?php foreach ($hits as $hit): ?>
                         <?php $mainImg = $hit->getImage();?>
-                        <div class="col-sm-4 col-xs-6 ">
+                        <div class="col-sm-4 col-xs-6 product_stoke_item">
                             <div class="product-image-wrapper">
                                 <div class="single-products">
                                         <div class="productinfo text-center">
@@ -51,8 +51,9 @@ use yii\bootstrap\Modal;
 <h2><?= $hit->price?> ₽</h2>
 
  <?php endif?>
-                                            <p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" class="adm-name-product"><?= $hit->name?></a></p>
+                                            <p class="product__title"><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" class="adm-name-product"><?= $hit->name?></a></p>
                                             <a href="#" data-id="<?= $hit->id ?>"  class="btn btn-default add-to-cart"><img class="adm-cart-product" src="/images/home/icons8-shopping-bag-filled-50.png"></a>
+                                            <a href="#" data-id="<?= $hit->id ?>"  class="btn btn-default add-to-cart add-to-cart__mobile" aria-label="<?= $hit->id ?>">В корзину</a>
 
 
 <!-- Быстрый просмотр-->
@@ -95,7 +96,7 @@ use yii\bootstrap\Modal;
                         <div class="col-sm-6">
                             <div class="product-information"><!--/product-information-->
                     <div class="adm-name-modal"><?= $hit->name?></div>
-       			 <div class="adm-modal-content-product"><?= $hit->content?></div>
+                 <div class="adm-modal-content-product"><?= $hit->content?></div>
 
                 </div>
 
@@ -111,13 +112,7 @@ use yii\bootstrap\Modal;
 
 
                                         </div>
-                                     <!--   <div class="product-overlay">
-                                            <div class="overlay-content">
-                                                <h2>$<?= $hit->price?></h2>
-                                                <p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" ><?= $hit->name?></a></p>
-                                                <a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
-                                            </div>
-                                        </div> -->
+
                                          <?php if($hit->new):?>
                     <?=Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'new'])?>
                 <?php endif?>
@@ -130,8 +125,10 @@ use yii\bootstrap\Modal;
                             </div>
                         </div>
                         <?php endforeach;?>
-                    </div><!--features_items-->
+                    </div>
+                     <a href="#" id="loadmore_stoke" class="btn btn-default">Показать еще</a><!--features_items-->
                 <?php endif; ?>
+
                 </div>
             </div>
         </div>

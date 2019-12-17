@@ -54,8 +54,9 @@
 <h2><?= $product->price?> ₽</h2>
 
  <?php endif?>
-                           <p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>" class="adm-name-product"><?= $product->name?></a></p>
+                           <p class="product__title"><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>" class="adm-name-product"><?= $product->name?></a></p>
                           <a href="#" title="В корзину" data-toggle="tooltip" data-placement="left" data-id="<?= $product->id ?>" class="btn btn-default add-to-cart"><img class="adm-cart-product" src="/images/home/icons8-shopping-bag-filled-50.png"></a>
+                          <a href="#" data-id="<?= $product->id ?>"  class="btn btn-default add-to-cart add-to-cart__mobile" aria-label="<?= $product->id ?>">В корзину</a>
                         </div>
                         <!--<div class="product-overlay">
                            <div class="overlay-content">

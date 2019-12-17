@@ -65,6 +65,7 @@ class Category extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+            'image' => 'Изображение категории',
             'id' => '№ категории',
             'parent_id' => 'Родительская категория',
             'name' => 'Название категории',

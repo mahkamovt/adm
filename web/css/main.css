@@ -73,7 +73,9 @@ p.category_hits_title {
     position: absolute;
     left: 95px;
 }
-
+p.category_hits_title {
+    cursor: pointer;
+}
 p.category_hits_title a {
 color: #fff;
 }
@@ -1157,15 +1159,21 @@ ul.sub-category-top-menu {
      font-family: 'Roboto', sans-serif;
 }
  .get {
-     background: #333;
-     border: 0 none;
-     border-radius: 0;
-     color: #FFFFFF;
-     font-family: 'Roboto', sans-serif;
-     font-size: 16px;
-     font-weight: 300;
-     margin-top: 23px;
-     transition: 2s;
+    font-size: 15px;
+    text-transform: none;
+    border-radius: 4px;
+    border-color: #bfbfbf;
+    background-color: #bfbfbf;
+    color: #fff;
+}
+
+
+.get:hover {
+    background-color: #2e3286!important;
+
+}
+.get:hover a {
+    color: #dedede!important;
 }
  .item button:hover {
      background: #dedede;
@@ -1432,8 +1440,13 @@ ul.sub-category-top-menu {
      font-weight: 400;
      color: #696763;
      margin-bottom: 25px;
-     max-height: 20px;
 }
+
+p.product__title {
+    max-height: 20px;
+    height: 20px;
+}
+
  .productinfo img{
      width: 100%;
 }
@@ -2070,6 +2083,7 @@ a.btn.btn-success.add-to-cart.cart.cart-mob-btn:hover{
       }
       nav#myNavmenu {
           background-color: #000;
+          overflow: hidden;
       }
       .navbar.navbar-default.navbar-fixed-top {
       background-color: #000;
@@ -2085,14 +2099,70 @@ a.btn.btn-success.add-to-cart.cart.cart-mob-btn:hover{
   height: 13px!important;
 }
 
+/*#slider .col-sm-6 {padding: 0!important;}*/
+
+.item.col-sm-12{
+  padding: 0;
+}
+
+
+.slider__title {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.product_item{
+  display: none;
+}
+
+.product_stoke_item{
+  display: none;
+
+}
+
+a#loadmore {
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    background-color: #2e3286;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: 25%;
+}
+
+a#loadmore_stoke {
+    margin: auto;
+    display: block;
+    margin-bottom: 20px;
+    background-color: #2e3286;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    width: 25%;
+}
 
 /*Админ-панель*/
 
-input#product-image, input#product-gallery {
+input#product-image,
+input#product-gallery,
+input#category-image,
+input#sliderimageupload-image,
+input#imageupload-image,
+input#bannerupload-banner,
+input#mainimageupload-mainimage{
     display: none;
 }
 
-.field-product-gallery label.control-label, .field-product-image label.control-label {
+.field-product-gallery label.control-label,
+.field-product-image label.control-label,
+.field-category-image label.control-label,
+.field-sliderimageupload-image label.control-label,
+.field-imageupload-image label.control-label,
+.form-group.field-bannerupload-banner label.control-label,
+.field-mainimageupload-mainimage label.control-label
+ {
    width: 100%;
     padding: 10px 9px 9px 8px;
     color: #333;
@@ -2101,16 +2171,34 @@ input#product-image, input#product-gallery {
     text-align: center;
 }
 
-.field-product-gallery label.control-label, .field-product-image label.control-label {
+.field-product-gallery label.control-label,
+.field-product-image label.control-label,
+.field-category-image label.control-label,
+.field-sliderimageupload-image label.control-label,
+.field-imageupload-image label.control-label,
+.field-bannerupload-banner label.control-label,
+.field-mainimageupload-mainimage label.control-label
+ {
   cursor: pointer;
 }
 
-.upload-image-product {
-    width: 64%;
-}
 
-.form-group.field-product-image, .form-group.field-product-gallery{
+.form-group.field-product-image,
+.form-group.field-product-gallery,
+.form-group.field-category-image,
+.form-group.field-sliderimageupload-image,
+.form-group.field-imageupload-image,
+.form-group.field-bannerupload-banner,
+.form-group.field-mainimageupload-mainimage
+{
     width: 39%;
     display: inline-block;
     padding: 0px 24px 0px 0px;
 }
+
+
+
+.upload-image {
+    width: 64%;
+}
+

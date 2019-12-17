@@ -65,9 +65,9 @@
                <div class="carousel-inner">
                   <?php foreach($slides as $key => $slide): ?>
                   <?php $img = $slide->getImage();?>
-                  <div class="item <?php if($key == 0) echo ' active'?>">
+                  <div class="item col-sm-12 <?php if($key == 0) echo ' active'?>">
                      <div class="col-sm-6">
-                        <h1><?= $slide->title ?></h1>
+                        <div class="slider__title"><?= $slide->title ?></div>
                         <p><?= $slide->description ?></p>
                         <button type="button" class="btn btn-default get"><a href="<?= $slide->button ?>" class="carousel-link" aria-label="">Посмотреть</a></button>
                      </div>
@@ -125,19 +125,21 @@
                <h2 class="title text-center">Хиты продаж</h2>
                <?php foreach ($hits as $hit): ?>
                <?php $mainImg = $hit->getImage();?>
-               <div class="col-sm-4 col-xs-6 ">
+               <div class="col-sm-6 col-xs-6 product_item">
                   <div class="product-image-wrapper">
                      <div class="single-products">
                         <div class="productinfo text-center">
                            <a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" aria-label="">
-                     <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('250x250')?>" alt="<?= $hit->name?>">
+                     <img class="lazy" src="/images/home/Eclipse-4.2s-200px.svg" data-original="<?= $mainImg->getUrl('400x400')?>" alt="<?= $hit->name?>">
                            <?php if(!empty($hit->stock_price) ):?>
                            <h2> <?= $hit->stock_price?> ₽ <strike><?= $hit->price?> ₽</strike></h2>
                            <?php else:?>
                            <h2><?= $hit->price?> ₽</h2>
                            <?php endif?>
-                           <p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" class="adm-name-product" aria-label="<?= $hit->id ?>"><?= $hit->name?></a></p>
+                           <p class="product__title"><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $hit->id]) ?>" class="adm-name-product" aria-label="<?= $hit->id ?>"><?= $hit->name?></a></p>
                            <a href="#" data-id="<?= $hit->id ?>"  class="btn btn-default add-to-cart" aria-label="<?= $hit->id ?>"><img class="adm-cart-product" src="/images/home/icons8-shopping-bag-filled-50.png" alt=""></a>
+
+
                            <!-- Быстрый просмотр-->
                            <?php
                               Modal::begin([
@@ -154,6 +156,9 @@
 
                                                   ]);
                               ?>
+
+
+
                            <section>
 
                                  <?php
@@ -186,7 +191,10 @@
 
                            </section>
                            <?php Modal::end();?>
+                            <a href="#" data-id="<?= $hit->id ?>"  class="btn btn-default add-to-cart add-to-cart__mobile" aria-label="<?= $hit->id ?>">В корзину</a>
                         </div>
+
+
                         <?php if($hit->new):?>
                         <?=Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'new'])?>
                         <?php endif?>
@@ -197,8 +205,9 @@
                   </div>
                </div>
                <?php endforeach;?>
+
             </div>
-            <!--features_items-->
+ <a href="#" id="loadmore" class="btn btn-default">Показать еще</a>
             <?php endif; ?>
          </div>
       </div>
