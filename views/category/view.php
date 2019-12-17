@@ -97,7 +97,7 @@ $this->params['breadcrumbs'][] = ['label' => $category->name,];
 <h2><?= $product->price?> ₽</h2>
 
  <?php endif?>
-		<p><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>" class="adm-name-product"><?= $product->name?></a></p>
+		<p class="product__title"><a href="<?= \yii\helpers\Url::to(['product/view', 'id' => $product->id]) ?>" class="adm-name-product"><?= $product->name?></a></p>
 										<a href="#" title="В корзину" data-toggle="tooltip" data-placement="left" data-id="<?= $product->id ?>" class="btn btn-default add-to-cart"><img class="adm-cart-product" src="/images/home/icons8-shopping-bag-filled-50.png"></a>
 
 
@@ -162,6 +162,7 @@ $this->params['breadcrumbs'][] = ['label' => $category->name,];
 
 
 					</div>
+					<a href="#" data-id="<?= $product->id ?>"  class="btn btn-default add-to-cart add-to-cart__mobile" aria-label="<?= $product->id ?>">В корзину</a>
 			  <?php if($product->new):?>
                     <?=Html::img("@web/images/home/new.png", ['alt' => 'Новинка', 'class' => 'new'])?>
                 <?php endif?>
