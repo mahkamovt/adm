@@ -252,6 +252,8 @@ select#size {
   section.video-adm {
     height: 110px;
     padding: 0;
+    position: fixed;
+    z-index: 9999;
   }
 
   section.video-adm h3 {

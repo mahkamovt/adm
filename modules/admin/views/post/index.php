@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
 
                 'format' => 'html',
-                'label' => 'Image',
+                'label' => 'Главное изображение',
                 'value' => function($data){
                     return Html::img($data->getImage(), ['width'=>200]);
                 }
@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
             [
 
                 'format' => 'html',
-                'label' => 'Banner',
+                'label' => 'Баннер',
                 'value' => function($data){
                     return Html::img($data->getBanner(), ['width'=>200]);
                 }

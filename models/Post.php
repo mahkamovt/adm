@@ -43,6 +43,8 @@ class Post extends ActiveRecord
         return [
             'id' => 'ID',
             'title' => 'Заголовок новости',
+            'image' => 'Главное изображение',
+            'banner' => 'Баннер',
             'anons' => 'Aнонс',
             'description' => 'Содержимое',
             'user_id' => 'User ID',
